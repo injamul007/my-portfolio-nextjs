@@ -75,8 +75,8 @@ export default function Hero() {
         transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" }}
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-        <div className="order-2 lg:order-1 flex flex-col lg:flex-row items-center lg:items-start gap-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+        <div className="order-2 lg:order-1 flex flex-col lg:flex-row items-center lg:items-start lg:gap-24 md:gap-12 gap-8">
           {/* Social Links */}
           <motion.div
             className="flex lg:flex md:flex lg:flex-col gap-4 mt-1"
