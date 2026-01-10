@@ -4,7 +4,7 @@ A sleek, responsive portfolio website built with cutting-edge web technologies t
 
 ## 🌐 Live Demo
 
-[**Live Portfolio**](YOUR-LIVE-LINK-HERE) | [**GitHub Repository**](https://github.com/injamul007/my-portfolio-nextjs)
+[**Live Portfolio**](https://injamul-hoque-dev.vercel.app/) | [**GitHub Repository**](https://github.com/injamul007/my-portfolio-nextjs)
 
 ## 📋 Project Overview
 
@@ -109,7 +109,7 @@ The portfolio is fully responsive and optimized for:
 
 ## 📞 Contact & Links
 
-- **Portfolio**: [Live Demo](YOUR-LIVE-LINK-HERE)
+- **Portfolio**: [Live Demo](https://injamul-hoque-dev.vercel.app/)
 - **GitHub**: [Repository](https://github.com/injamul007/my-portfolio-nextjs)
 - **Resume**: [Download PDF](Not Available Right Now)
 - **LinkedIn**: [Professional Profile](https://www.linkedin.com/in/injamulhoque007/)

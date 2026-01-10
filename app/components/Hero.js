@@ -1,8 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Send, Download } from 'lucide-react'
 import { motion } from 'framer-motion'
 
@@ -24,8 +22,8 @@ export default function Hero() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        duration: 1.2,
+        ease: [0.99, 0.99, 0.99, 0.94]
       }
     }
   }
@@ -36,7 +34,7 @@ export default function Hero() {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.8,
+        duration: 1.2,
         ease: "easeOut",
         staggerChildren: 0.1
       }
@@ -50,7 +48,7 @@ export default function Hero() {
       scale: 1,
       rotate: 0,
       transition: {
-        duration: 1,
+        duration: 1.3,
         ease: [0.25, 0.46, 0.45, 0.94]
       }
     }
@@ -74,7 +72,7 @@ export default function Hero() {
         className="absolute bottom-0 left-0 w-64 h-64 sm:w-96 sm:h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+        transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" }}
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -163,7 +161,7 @@ export default function Hero() {
                       className={`inline-block ${char === " " ? "w-2" : "mr-0"}`} // add spacing for spaces
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.05, duration: 0.4, ease: "easeOut" }}
+                      transition={{ delay: i * 0.06, duration: 1.2, ease: "easeOut" }}
                     >
                       {char === " " ? "\u00A0" : char} {/* non-breaking space */}
                     </motion.span>
