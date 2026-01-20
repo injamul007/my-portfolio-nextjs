@@ -239,7 +239,8 @@ export default function Hero() {
 
               {/* Resume Button */}
               <motion.a
-                
+                href="/resume/Injamul-Hoque-MERN-Developer-Resume.pdf"
+                download="Injamul_Hoque_Resume.pdf"
                 className="cursor-pointer group relative inline-flex items-center gap-3 px-8 py-4 rounded-full
       bg-slate-800 hover:bg-slate-700 dark:bg-white/10 dark:hover:bg-white/20
       text-white backdrop-blur-sm border border-slate-700 dark:border-white/10
