@@ -114,7 +114,7 @@ export default function Navbar({ darkMode, toggleTheme, isModalOpen }) {
                 className="hidden md:flex items-center gap-1 px-2 py-2 rounded-full glass light-glass shadow-lg"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
+                transition={{ delay: 0.1, duration: 0.2 }}
               >
                 {sections.map((sec, index) => (
                   <motion.button
@@ -125,7 +125,7 @@ export default function Navbar({ darkMode, toggleTheme, isModalOpen }) {
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + index * 0.1, duration: 0.4 }}
+                    transition={{ delay: 0.3 + index * 0.1, duration: 0.1 }}
                   >
                     {{
                       home: <Home className="w-4 h-4 text-primary" />,
