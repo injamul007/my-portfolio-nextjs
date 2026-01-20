@@ -1,87 +1,98 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { Home, User, Code2, FolderOpen, Mail, Menu, Sun, Moon, X } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from "react";
+import {
+  Home,
+  User,
+  Code2,
+  FolderOpen,
+  Mail,
+  Menu,
+  Sun,
+  Moon,
+  X,
+} from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar({ darkMode, toggleTheme, isModalOpen }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState('home')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
-  const sections = ['home', 'about', 'skills', 'projects', 'contact']
+  const sections = ["home", "about", "skills", "projects", "contact"];
 
   // Active section detection on scroll
   useEffect(() => {
     const handleScroll = () => {
-      let current = 'home'
+      let current = "home";
       for (const id of sections) {
-        const el = document.getElementById(id)
-        if (!el) continue
-        const rect = el.getBoundingClientRect()
-        if (rect.top <= window.innerHeight * 0.4) current = id
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.4) current = id;
       }
-      setActiveSection(current)
-    }
+      setActiveSection(current);
+    };
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
 
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Mobile scroll lock
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = ''
+      document.body.style.overflow = "";
     }
-  }, [mobileMenuOpen])
+  }, [mobileMenuOpen]);
 
-  const closeMobileMenu = () => setMobileMenuOpen(false)
-  const toggleMobileMenu = () => setMobileMenuOpen(prev => !prev)
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+  const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
 
   // ✅ CLEAN SCROLL — SAME AS FOOTER
   const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId)
-    if (!section) return
+    const section = document.getElementById(sectionId);
+    if (!section) return;
 
-    setActiveSection(sectionId)
-    closeMobileMenu()
+    setActiveSection(sectionId);
+    closeMobileMenu();
 
     section.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    })
-  }
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   const getLinkClasses = (sectionId) => {
     const base =
-      'flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full transition-all cursor-pointer'
+      "flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full transition-all cursor-pointer";
     const active =
-      'bg-surface-light/50 dark:bg-white/10 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10'
+      "bg-surface-light/50 dark:bg-white/10 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10";
     const inactive =
-      'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+      "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white";
 
-    return `${base} ${activeSection === sectionId ? active : inactive}`
-  }
+    return `${base} ${activeSection === sectionId ? active : inactive}`;
+  };
 
   const getMobileLinkClasses = (sectionId) => {
-    const base = 'mobile-link flex items-center gap-3 text-3xl transition-colors cursor-pointer'
+    const base =
+      "mobile-link flex items-center gap-3 text-3xl transition-colors cursor-pointer";
 
     if (activeSection === sectionId) {
       const colors = {
-        home: 'text-blue-500',
-        about: 'text-emerald-500',
-        skills: 'text-blue-500',
-        projects: 'text-orange-500',
-        contact: 'text-pink-500',
-      }
-      return `${base} ${colors[sectionId]}`
+        home: "text-blue-500",
+        about: "text-emerald-500",
+        skills: "text-blue-500",
+        projects: "text-orange-500",
+        contact: "text-pink-500",
+      };
+      return `${base} ${colors[sectionId]}`;
     }
 
-    return `${base} text-slate-900 dark:text-white`
-  }
+    return `${base} text-slate-900 dark:text-white`;
+  };
 
   return (
     <>
@@ -92,7 +103,7 @@ export default function Navbar({ darkMode, toggleTheme, isModalOpen }) {
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <div className="flex items-center justify-between w-full max-w-7xl">
               {/* Logo */}
@@ -102,7 +113,7 @@ export default function Navbar({ darkMode, toggleTheme, isModalOpen }) {
                 whileTap={{ scale: 0.95 }}
               >
                 <button
-                  onClick={() => scrollToSection('home')}
+                  onClick={() => scrollToSection("home")}
                   className="text-2xl font-bold italic tracking-tighter text-slate-900 dark:text-white"
                 >
                   IH
@@ -114,26 +125,47 @@ export default function Navbar({ darkMode, toggleTheme, isModalOpen }) {
                 className="hidden md:flex items-center gap-1 px-2 py-2 rounded-full glass light-glass shadow-lg"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1, duration: 0.2 }}
+                transition={{
+                  delay: 0.6,
+                  duration: 1,
+                  ease: "easeOut",
+                }}
               >
                 {sections.map((sec, index) => (
                   <motion.button
                     key={sec}
                     onClick={() => scrollToSection(sec)}
                     className={getLinkClasses(sec)}
+                    /* Hover + Tap state (NO transition here) */
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
+                    /* Entrance animation */
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + index * 0.1, duration: 0.1 }}
+                    /* ONE transition to rule them all */
+                    transition={{
+                      /* entrance */
+                      delay: 0.4 + index * 0.1,
+                      opacity: { duration: 0.6, ease: "easeOut" },
+                      y: { duration: 0.6, ease: "easeOut" },
+
+                      /* interaction (hover IN + OUT) */
+                      scale: { duration: 0.12, ease: "easeOut" },
+                      y: { duration: 0.12, ease: "easeOut" },
+                    }}
                   >
-                    {{
-                      home: <Home className="w-4 h-4 text-primary" />,
-                      about: <User className="w-4 h-4 text-emerald-400" />,
-                      skills: <Code2 className="w-4 h-4 text-blue-400" />,
-                      projects: <FolderOpen className="w-4 h-4 text-orange-400" />,
-                      contact: <Mail className="w-4 h-4 text-pink-400" />,
-                    }[sec]}
+                    {
+                      {
+                        home: <Home className="w-4 h-4 text-primary" />,
+                        about: <User className="w-4 h-4 text-emerald-400" />,
+                        skills: <Code2 className="w-4 h-4 text-blue-400" />,
+                        projects: (
+                          <FolderOpen className="w-4 h-4 text-orange-400" />
+                        ),
+                        contact: <Mail className="w-4 h-4 text-pink-400" />,
+                      }[sec]
+                    }
+
                     {sec.charAt(0).toUpperCase() + sec.slice(1)}
                   </motion.button>
                 ))}
@@ -227,13 +259,15 @@ export default function Navbar({ darkMode, toggleTheme, isModalOpen }) {
                 whileHover={{ scale: 1.1, x: 10 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {{
-                  home: <Home className="w-8 h-8" />,
-                  about: <User className="w-8 h-8" />,
-                  skills: <Code2 className="w-8 h-8" />,
-                  projects: <FolderOpen className="w-8 h-8" />,
-                  contact: <Mail className="w-8 h-8" />,
-                }[sec]}
+                {
+                  {
+                    home: <Home className="w-8 h-8" />,
+                    about: <User className="w-8 h-8" />,
+                    skills: <Code2 className="w-8 h-8" />,
+                    projects: <FolderOpen className="w-8 h-8" />,
+                    contact: <Mail className="w-8 h-8" />,
+                  }[sec]
+                }
                 {sec.charAt(0).toUpperCase() + sec.slice(1)}
               </motion.button>
             ))}
@@ -241,5 +275,5 @@ export default function Navbar({ darkMode, toggleTheme, isModalOpen }) {
         )}
       </AnimatePresence>
     </>
-  )
+  );
 }
