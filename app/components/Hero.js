@@ -203,7 +203,7 @@ export default function Hero() {
               </motion.button>
 
               <motion.a
-                href="#"
+                
                 className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-slate-800 hover:bg-slate-700 dark:bg-white/10 dark:hover:bg-white/20 text-white backdrop-blur-sm border border-slate-700 dark:border-white/10 transition-all duration-300 overflow-hidden"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
