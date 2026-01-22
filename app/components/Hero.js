@@ -239,8 +239,8 @@ export default function Hero() {
 
               {/* Resume Button */}
               <motion.a
-                href="https://docs.google.com/document/d/1LjngXrSlbCGcQRPprLY5WpxOaVqsXcXay2NkP8TmDdU/export?format=pdf"
-                rel="noopener noreferrer"
+                href="/resume/Injamul-Hoque-MERN-Dev-Resume.pdf"
+                download
                 aria-label="Download Resume"
                 className="cursor-pointer group relative inline-flex items-center gap-3 px-8 py-4 rounded-full
       bg-slate-800 hover:bg-slate-700 dark:bg-white/10 dark:hover:bg-white/20
