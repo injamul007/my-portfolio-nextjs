@@ -126,5 +126,3 @@ This portfolio demonstrates:
 - **Code Quality** - Clean, maintainable, and scalable codebase
 
 ---
-
-*Built with passion for modern web development and attention to detail. Ready to bring innovative solutions to your next project.*
