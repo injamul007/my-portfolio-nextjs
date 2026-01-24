@@ -124,5 +124,3 @@ This portfolio demonstrates:
 - **User Experience Design** - Intuitive navigation and engaging animations
 - **Responsive Development** - Cross-device compatibility and accessibility
 - **Code Quality** - Clean, maintainable, and scalable codebase
-
----
