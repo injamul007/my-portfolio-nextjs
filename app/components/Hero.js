@@ -320,7 +320,7 @@ export default function Hero() {
               transition={{ duration: 1 }}
             />
             <Image
-              src="https://i.ibb.co.com/rGRSTbmh/My-Picture-Front-Head2.jpg"
+              src="/injamul_hoque.png"
               alt="Injamul Hoque Portrait"
               width={450}
               height={450}

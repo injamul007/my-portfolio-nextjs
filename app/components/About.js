@@ -122,8 +122,7 @@ export default function About() {
               transition={{ duration: 0.3 }}
             >
               <Image
-                src="https://i.ibb.co.com/XZ5BPv6v/gemini-2-5-flash-image-Create-a-portrait-style-image-in-an-illustrator-vector-art-style-but-keep-the.jpg"
-                alt="About Me"
+                src="/injamul_hoque_black.png"
                 width={600}
                 height={600}
                 className="w-full h-full object-cover"
