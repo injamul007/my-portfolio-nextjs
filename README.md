@@ -111,7 +111,7 @@ The portfolio is fully responsive and optimized for:
 
 - **Portfolio**: [Live Demo](https://injamul-hoque-dev.vercel.app/)
 - **GitHub**: [Repository](https://github.com/injamul007/my-portfolio-nextjs)
-- **Resume**: [Download PDF](https://drive.google.com/file/d/1Q7uo469A5Huvi3bvun3xFyOdY0bEf0NN/view)
+- **Resume**: [View in PDF](https://drive.google.com/file/d/1Q7uo469A5Huvi3bvun3xFyOdY0bEf0NN/view)
 - **LinkedIn**: [Professional Profile](https://www.linkedin.com/in/injamulhoque007/)
 - **Email**: [Contact Me](mailto:injamul007hoque@gmail.com)
 
